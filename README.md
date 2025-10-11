@@ -21,7 +21,7 @@ Implements an MVC architecture with features such as video management, playlists
 |----------|----------------------------------|
 | UI       | JavaFX, FXML                     |
 | Logic    | Java (MVC pattern)               |
-| Database | MySQL (via Database singleton)   |
+| Database | (via Database singleton)   |
 | Build    | Maven                             |
 | IDE      | IntelliJ IDEA                     |
 
