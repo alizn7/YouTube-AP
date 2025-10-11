@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane minWidth="600.0" maxWidth="1000.0" style="-fx-background-color: #212529;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CreateChannelController">
+    <left>
+        <fx:include source="Sidebar.fxml" />
+    </left>
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+            <Label text="Create Channel" style="-fx-font-size: 24px; -fx-text-fill: #ff6b6b; -fx-font-weight: bold;" />
+            <TextField fx:id="nameField" promptText="Channel Name" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <TextArea fx:id="descriptionField" promptText="Channel Description" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <HBox spacing="10">
+                <Button fx:id="createButton" onAction="#handleCreate" text="Create" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Button fx:id="backButton" onAction="#handleBack" text="Back" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 8;" />
+            </HBox>
+            <Label fx:id="errorLabel" style="-fx-font-size: 14px; -fx-text-fill: #ff6b6b;" />
+        </VBox>
+    </center>
+</BorderPane>

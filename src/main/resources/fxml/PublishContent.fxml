@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane minWidth="600.0" maxWidth="1000.0" style="-fx-background-color: #212529;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PublishContentController">
+    <left>
+        <fx:include source="Sidebar.fxml" />
+    </left>
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <Label text="Publish Content" style="-fx-font-size: 24px; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+            <TextField fx:id="titleField" promptText="Title" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <TextArea fx:id="descriptionField" promptText="Description" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <ComboBox fx:id="typeCombo" promptText="Content Type" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <ComboBox fx:id="videoTypeCombo" promptText="Video Type" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" visible="false" managed="false" />
+            <ComboBox fx:id="playlistCombo" promptText="Select Playlist" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <ComboBox fx:id="categoryCombo" promptText="Category" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <CheckBox fx:id="exclusiveCheck" text="Exclusive Content" style="-fx-text-fill: #adb5bd;" />
+            <HBox spacing="10">
+                <TextField fx:id="durationField" promptText="Duration (mm:ss)" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+                <Button fx:id="uploadCoverButton" onAction="#handleUploadCover" text="Upload Cover" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Label fx:id="coverLabel" style="-fx-font-size: 14px; -fx-text-fill: #adb5bd;" text="No cover selected" />
+            </HBox>
+            <HBox spacing="10">
+                <Button fx:id="uploadButton" onAction="#handleUpload" text="Upload File" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Label fx:id="fileLabel" style="-fx-font-size: 14px; -fx-text-fill: #adb5bd;" text="No file selected" />
+            </HBox>
+            <HBox fx:id="normalVideoFields" spacing="10" visible="false" managed="false">
+                <TextField fx:id="subtitleField" promptText="Subtitle File" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+                <ComboBox fx:id="qualityCombo" promptText="Quality" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+                <ComboBox fx:id="formatCombo" promptText="Format" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            </HBox>
+            <HBox fx:id="shortVideoFields" spacing="10" visible="false" managed="false">
+                <TextField fx:id="subtitleFieldShort" promptText="Subtitle File" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+                <TextField fx:id="audioTitleField" promptText="Audio Title" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            </HBox>
+            <HBox fx:id="liveStreamFields" spacing="10" visible="false" managed="false">
+                <TextField fx:id="subtitleFieldLive" promptText="Subtitle File" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+                <TextField fx:id="scheduledDateField" promptText="Scheduled Date (yyyy-MM-dd)" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            </HBox>
+            <HBox spacing="10">
+                <Button fx:id="publishButton" onAction="#handlePublish" text="Publish" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Button fx:id="backButton" onAction="#handleBack" text="Back" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 8;" />
+            </HBox>
+            <Label fx:id="errorLabel" style="-fx-font-size: 14px; -fx-text-fill: #ff6b6b;" />
+        </VBox>
+    </center>
+</BorderPane>

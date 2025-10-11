@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<AnchorPane prefHeight="623.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CategorySelectionController">
+
+    <MediaView fx:id="mediaView" fitHeight="623.0" fitWidth="800.0" preserveRatio="false" smooth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+
+    <VBox fx:id="categoryBox" alignment="CENTER" layoutX="199.0" layoutY="19.0" prefHeight="562.0" prefWidth="402.0" spacing="20" style="-fx-background-color: rgba(30, 30, 30, 0.93); -fx-background-radius: 20;                  -fx-border-color: #495057; -fx-border-width: 1.2; -fx-border-radius: 20; -fx-padding: 30;">
+        <effect>
+            <DropShadow color="rgba(0,0,0,0.5)" offsetX="0" offsetY="4" radius="15" />
+        </effect>
+
+        <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #ffffff; -fx-padding: 0 0 10 0;" text="Choose Your Interests" />
+
+        <Label fx:id="counterLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #ff6b6b; -fx-padding: 0 0 10 0;" text="Selected: 0/4" />
+
+        <GridPane fx:id="categoryGrid" alignment="CENTER" hgap="10" vgap="10">
+
+            <ToggleButton fx:id="musicButton" prefHeight="80" prefWidth="110" style="-fx-background-color: #212529; -fx-text-fill: #ffffff; -fx-font-size: 14px;                                  -fx-background-radius: 10; -fx-border-color: #007BFF; -fx-border-width: 1.5;                                  -fx-border-radius: 10;" text="Music" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <ToggleButton fx:id="gameButton" prefHeight="80" prefWidth="110" style="-fx-background-color: #212529; -fx-text-fill: #ffffff; -fx-font-size: 14px;                                  -fx-background-radius: 10; -fx-border-color: #007BFF; -fx-border-width: 1.5;                                  -fx-border-radius: 10;" text="Game" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <ToggleButton fx:id="podcastButton" prefHeight="80" prefWidth="110" style="-fx-background-color: #212529; -fx-text-fill: #ffffff; -fx-font-size: 14px;                                  -fx-background-radius: 10; -fx-border-color: #007BFF; -fx-border-width: 1.5;                                  -fx-border-radius: 10;" text="Podcast" GridPane.columnIndex="2" />
+
+            <ToggleButton fx:id="newsButton" prefHeight="80" prefWidth="110" style="-fx-background-color: #212529; -fx-text-fill: #ffffff; -fx-font-size: 14px;                                  -fx-background-radius: 10; -fx-border-color: #007BFF; -fx-border-width: 1.5;                                  -fx-border-radius: 10;" text="News" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+            <ToggleButton fx:id="liveButton" prefHeight="80" prefWidth="110" style="-fx-background-color: #212529; -fx-text-fill: #ffffff; -fx-font-size: 14px;                                  -fx-background-radius: 10; -fx-border-color: #007BFF; -fx-border-width: 1.5;                                  -fx-border-radius: 10;" text="Live" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <ToggleButton fx:id="societyButton" prefHeight="80" prefWidth="110" style="-fx-background-color: #212529; -fx-text-fill: #ffffff; -fx-font-size: 14px;                                  -fx-background-radius: 10; -fx-border-color: #007BFF; -fx-border-width: 1.5;                                  -fx-border-radius: 10;" text="Society" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+            <ToggleButton fx:id="historyButton" prefHeight="80" prefWidth="110" style="-fx-background-color: #212529; -fx-text-fill: #ffffff; -fx-font-size: 14px;                                  -fx-background-radius: 10; -fx-border-color: #007BFF; -fx-border-width: 1.5;                                  -fx-border-radius: 10;" text="History" />
+
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <Button fx:id="continueButton" onAction="#handleContinue" prefWidth="150" style="-fx-background-color: linear-gradient(to right, #8e24aa, #0056b3); -fx-text-fill: white; -fx-background-radius: 12; -fx-font-size: 16px; -fx-font-weight: bold;" text="Continue" />
+
+        <Label fx:id="errorLabel" style="-fx-text-fill: #007BFF; -fx-font-size: 14px; -fx-font-weight: bold;" text="" />
+
+    </VBox>
+
+
+</AnchorPane>

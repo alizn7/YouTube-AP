@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="623.0" prefWidth="800.0" style="-fx-background-color: #212529;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HomeController">
+    <left>
+        <fx:include source="Sidebar.fxml" />
+    </left>
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ff6b6b;" text="Home" />
+            </HBox>
+            <HBox prefWidth="513.0" spacing="10">
+                <TextField fx:id="searchField" prefWidth="400" promptText="Search for content..." style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+                <Button fx:id="searchButton" onAction="#handleSearch" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" text="Search" />
+            </HBox>
+            <Label fx:id="searchResultLabel" style="-fx-font-size: 14px; -fx-text-fill: #ff6b6b;" text="" />
+            <ScrollPane fitToWidth="true" pannable="true" prefHeight="362.0" prefWidth="560.0" style="-fx-background-color: transparent;">
+                <GridPane fx:id="contentGrid" hgap="15" style="-fx-padding: 10;" vgap="15" />
+            </ScrollPane>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox minWidth="150.0" maxWidth="250.0" style="-fx-background-color: #1c2526; -fx-padding: 10; -fx-spacing: 10;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SidebarController">
+    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10;">
+        <ImageView fitHeight="30" fitWidth="30">
+            <image>
+                <Image url="@../images/logo.png" />
+            </image>
+        </ImageView>
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #ff6b6b; -fx-font-family: 'Roboto';" text="IuTube" />
+    </HBox>
+    <Separator style="-fx-background-color: #adb5bd;" />
+    <Button fx:id="homeButton" graphicTextGap="10" onAction="#handleHome" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-font-family: 'Roboto';" text="Home">
+        <graphic>
+            <ImageView fitHeight="20" fitWidth="20">
+                <image>
+                    <Image url="@../images/home_icon.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button fx:id="subscriptionsButton" graphicTextGap="10" onAction="#handleSubscriptions" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-font-family: 'Roboto';" text="Subscriptions">
+        <graphic>
+            <ImageView fitHeight="20" fitWidth="20">
+                <image>
+                    <Image url="@../images/Subscriptions_icon.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button fx:id="channelButton" graphicTextGap="10" onAction="#handleChannel" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-font-family: 'Roboto';" text="Your Channel">
+        <graphic>
+            <ImageView fitHeight="20" fitWidth="20">
+                <image>
+                    <Image url="@../images/channel_icon.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button fx:id="libraryButton" graphicTextGap="10" onAction="#handleLibrary" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-font-family: 'Roboto';" text="Library">
+        <graphic>
+            <ImageView fitHeight="20" fitWidth="20">
+                <image>
+                    <Image url="@../images/library_icon.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button fx:id="adminButton" graphicTextGap="10" onAction="#handleAdmin" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-font-family: 'Roboto';" text="Admin Panel" visible="false">
+        <graphic>
+            <ImageView fitHeight="20" fitWidth="20">
+                <image>
+                    <Image url="@../images/admin_icon.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button fx:id="logoutButton" graphicTextGap="10" onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-font-family: 'Roboto';" text="Log Out">
+        <graphic>
+            <ImageView fitHeight="20" fitWidth="20">
+                <image>
+                    <Image url="@../images/logout_icon.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+</VBox>

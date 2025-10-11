@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane minWidth="600.0" maxWidth="1000.0" style="-fx-background-color: #212529;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LibraryController">
+    <left>
+        <fx:include source="Sidebar.fxml" />
+    </left>
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Button fx:id="backButton" onAction="#handleBack" text="Back" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Label text="Library" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ff6b6b;" />
+            </HBox>
+            <HBox spacing="10">
+                <Label fx:id="usernameLabel" style="-fx-font-size: 16px; -fx-text-fill: #ffffff;" text="Username" />
+                <Label fx:id="balanceLabel" style="-fx-font-size: 16px; -fx-text-fill: #ffffff;" text="Balance: 0" />
+            </HBox>
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+                <VBox fx:id="playlistBox" spacing="10" style="-fx-padding: 10;" />
+            </ScrollPane>
+            <HBox spacing="10">
+                <Button fx:id="createPlaylistButton" onAction="#handleCreatePlaylist" text="Create Playlist" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Button fx:id="buyPremiumButton" onAction="#handleBuyPremium" text="Buy Premium" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Button fx:id="increaseBalanceButton" onAction="#handleIncreaseBalance" text="Increase Balance" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Button fx:id="logoutButton" onAction="#handleLogout" text="Logout" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 8;" />
+            </HBox>
+            <Label fx:id="errorLabel" style="-fx-font-size: 14px; -fx-text-fill: #ff6b6b;" text="" />
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane minWidth="600.0" maxWidth="1000.0" style="-fx-background-color: #212529;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ChannelController2">
+    <left>
+        <fx:include source="Sidebar.fxml" />
+    </left>
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Button fx:id="backButton" onAction="#handleBack" text="Back" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Label fx:id="channelNameLabel" text="Channel Name" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ff6b6b;" />
+            </HBox>
+            <Label fx:id="followersLabel" text="0 Followers" style="-fx-font-size: 16px; -fx-text-fill: #adb5bd;" />
+            <TextArea fx:id="descriptionField" promptText="Channel Description" style="-fx-background-color: #2c2f33; -fx-text-fill: #ffffff; -fx-border-color: #ff6b6b; -fx-border-radius: 8;" />
+            <HBox spacing="10">
+                <Button fx:id="editButton" onAction="#handleEdit" text="Edit Description" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+                <Button fx:id="publishButton" onAction="#handlePublish" text="Publish Content" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 8;" />
+            </HBox>
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+                <VBox fx:id="playlistBox" spacing="10" style="-fx-padding: 10;" />
+            </ScrollPane>
+            <Label fx:id="errorLabel" style="-fx-font-size: 14px; -fx-text-fill: #ff6b6b;" text="" />
+        </VBox>
+    </center>
+</BorderPane>
