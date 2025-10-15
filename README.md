@@ -91,10 +91,10 @@ The project follows the **Model–View–Controller (MVC)** architecture:
    git clone https://github.com/alizn7/YouTube-AP.git
    cd YouTube-AP
    
-Build with Maven:
-mvn clean install
-Run the application:
-mvn javafx:run
+- Build with Maven:
+- mvn clean install
+- Run the application:
+- mvn javafx:run
 
 
 
